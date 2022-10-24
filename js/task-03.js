@@ -12,3 +12,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+const ul = document.querySelector('.gallery');
+const li = images.reduce(
+  (acc, { url, alt }) => acc + `<li> <img src="${url}" alt="${alt}" width="200"> </li>`,
+  ''
+);
+ul.style.listStyle = 'none';
+ul.style.display = 'flex';
+ul.style.flexWrap = 'wrap';
+ul.style.justifyContent = 'space-between';
+ul.insertAdjacentHTML('afterbegin', li);
