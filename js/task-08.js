@@ -8,7 +8,7 @@ form.addEventListener('submit', event => {
     alert('Все поля должны быть заполнены');
   } else {
     const user = { email: email.value, password: password.value };
-    console.log(form.elements);
+    console.log(user);
     event.currentTarget.reset();
   }
 });
